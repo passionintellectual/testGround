@@ -21,12 +21,14 @@ angular.module('testApp').directive('myRepeat', function() {
           }
           elements = [];
         }
-
+if(!collection || collection.length <= 0){
+  return;
+}
         for(var i=0; i < collection.length; i++) {
           var childScope = scope.$new();
           childScope[itemString] = collection[i];
           transclude(childScope, function(clone) {
-            el.before(clone);
+            el.after(clone);
             var item = {};
             item.el = clone;
             item.scope = childScope;
