@@ -7,6 +7,10 @@ angular.module('testApp', ['ui.bootstrap'])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/grepeat', {
+        templateUrl:'views/grepeat.html',
+        controller:'gRepeatTestCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
