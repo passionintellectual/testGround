@@ -1,0 +1,30 @@
+[
+  {
+    "author" : "=zolmeister",
+    "date" : "2014-06-17 ",
+    "keywords" : "",
+    "name" : "0",
+    "url" : null,
+    "version" : "0.0.0",
+    "words" : "0 =zolmeister"
+  },
+  {
+    "author" : "=skt",
+    "date" : "2014-08-08 ",
+    "description" : "This is my first custom module",
+    "keywords" : "",
+    "name" : "001",
+    "url" : null,
+    "version" : "0.0.1",
+    "words" : "001 this is my first custom module =skt"
+  },
+  {
+    "author" : "=skt",
+    "date" : "2014-08-08 ",
+    "description" : "This is my first custom module",
+    "keywords" : "",
+    "name" : "001_skt",
+    "url" : null,
+    "version" : "0.0.1",
+    "words" : "001_skt this is my first custom module =skt"
+  }]
