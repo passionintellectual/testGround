@@ -14,13 +14,13 @@ angular.module('testApp').directive('myRepeat', function() {
       var elements = [];
 
       scope.$watchCollection(collectionName, function(collection) {
-        if(elements.length > 0) {
-          for(var i=0; i < elements.length; i++) {
-            elements[i].el.remove();
-            elements[i].scope.$destroy();
-          }
-          elements = [];
-        }
+        //if(elements.length > 0) {
+        //  for(var i=0; i < elements.length; i++) {
+        //    elements[i].el.remove();
+        //    elements[i].scope.$destroy();
+        //  }
+        //  elements = [];
+        //}
 if(!collection || collection.length <= 0){
   return;
 }
@@ -28,11 +28,14 @@ if(!collection || collection.length <= 0){
           var childScope = scope.$new();
           childScope[itemString] = collection[i];
           transclude(childScope, function(clone) {
-            el.after(clone);
-            var item = {};
-            item.el = clone;
-            item.scope = childScope;
-            elements.push(item);
+            //console.log('clone', clone);
+            el.before(clone);
+setTimeout(function(){childScope.$destroy();}, 20);
+            //var item = {};
+            //item.el = clone;
+            //item.scope = childScope;
+            //elements.push(item);
+
           })
         }
       })
